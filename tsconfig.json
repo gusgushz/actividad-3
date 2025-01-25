@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node", // Resolver módulos como en Node.js
+    "resolveJsonModule": true, // Permitir la importación de JSON
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  }
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "name": "Tacos de carne asada",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Carne asada",
+      "Cebolla",
+      "Cilantro",
+      "Salsa de tomate"
+    ],
+    "steps": [
+      "Calienta las tortillas en un comal",
+      "Coloca la carne asada en las tortillas",
+      "Agrega cebolla y cilantro al gusto",
+      "Acompaña con salsa de tomate"
+    ],
+    "category": ["Comida mexicana", "Tacos"],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPe_ZJmItlGY8wnN_TnyY10VbqoDRMP56DEg&s"
+  },
+  {
+    "id": 2,
+    "name": "Tacos al pastor",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Carne de cerdo marinada",
+      "Piña",
+      "Cebolla",
+      "Cilantro"
+    ],
+    "steps": [
+      "Calienta las tortillas en un comal",
+      "Corta la carne de cerdo en trozos pequeños",
+      "Sirve la carne en las tortillas",
+      "Agrega piña, cebolla y cilantro"
+    ],
+    "category": ["Comida mexicana", "Tacos al pastor"],
+    "image": "https://example.com/tacos-al-pastor.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tacos de carnitas",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Carnitas de cerdo deshebradas",
+      "Cebolla blanca picada",
+      "Cilantro fresco",
+      "Salsa roja",
+      "Limón"
+    ],
+    "steps": [
+      "Calentar tortillas en un comal",
+      "Servir carnitas en tortillas",
+      "Agregar cebolla, cilantro y salsa roja",
+      "Acompañar con limón"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-carnitas.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Tacos de barbacoa",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Barbacoa de borrego deshebrada",
+      "Cebolla blanca picada",
+      "Cilantro fresco",
+      "Consomé de barbacoa"
+    ],
+    "steps": [
+      "Calentar tortillas en un comal",
+      "Servir barbacoa en tortillas",
+      "Agregar cebolla, cilantro y consomé",
+      "Acompañar con rábanos y salsa verde"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-barbacoa.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tacos de canasta",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Papa con chorizo",
+      "Chicharrón prensado",
+      "Adobo",
+      "Raya",
+      "Frijol refrito"
+    ],
+    "steps": [
+      "Calentar tortillas en un comal",
+      "Servir diferentes guisados en las tortillas",
+      "Agregar adobo y raya al gusto"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-canasta.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Tacos de pescado",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Filete de pescado blanco empanizado",
+      "Lechuga",
+      "Repollo morado",
+      "Tomate",
+      "Salsa tártara"
+    ],
+    "steps": [
+      "Freír el pescado hasta que esté dorado",
+      "Servir en tortillas con lechuga, repollo y tomate",
+      "Acompañar con salsa tártara"
+    ],
+    "category": ["Comida mexicana", "Tacos de mariscos"],
+    "image": "https://example.com/tacos-de-pescado.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tacos de lengua",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Lengua de res cocida y rebanada",
+      "Cebolla",
+      "Cilantro",
+      "Limón"
+    ],
+    "steps": [
+      "Servir la lengua en tortillas",
+      "Agregar cebolla, cilantro y limón al gusto"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-lengua.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tacos de tripa",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Tripa de res frita",
+      "Cebolla",
+      "Cilantro",
+      "Limón"
+    ],
+    "steps": [
+      "Servir la tripa en tortillas",
+      "Agregar cebolla, cilantro y limón al gusto"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-tripa.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Tacos dorados de papa",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Papa con chorizo",
+      "Queso",
+      "Aceite para freír"
+    ],
+    "steps": [
+      "Rellenar las tortillas con papa con chorizo y queso",
+      "Cerrarlas y freír hasta que estén doradas"
+    ],
+    "category": ["Comida mexicana", "Tacos dorados"],
+    "image": "https://example.com/tacos-dorados-de-papa.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Tacos de suadero",
+    "ingredients": [
+      "Tortillas de maíz",
+      "Suadero de res asada",
+      "Cebolla",
+      "Cilantro, Limón"
+    ],
+    "steps": [
+      "Servir el suadero en tortillas",
+      "Agregar cebolla, cilantro y limón al gusto"
+    ],
+    "category": ["Comida mexicana", "Tacos de guisado"],
+    "image": "https://example.com/tacos-de-suadero.jpg"
+  }
+]
