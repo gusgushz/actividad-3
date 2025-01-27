@@ -1,8 +1,8 @@
 /* Estilo general de la tarjeta */
 .recipe-card {
-  border: 1px solid #ddd; /* Opcional: para mostrar el límite de cada tarjeta */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   transition: transform 0.3s;
 }
@@ -91,12 +91,15 @@
 }
 
 .btn-favorite {
-  background-color: transparent; 
+  background: none;
   border: none; 
   cursor: pointer;
-  padding: 0; 
-  margin: 0;
   outline: none; 
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  color: #f9520f;
 }
 
 .btn-favorite:focus {
@@ -106,3 +109,5 @@
 .btn-favorite:hover {
   opacity: 0.8;
 }
+
+

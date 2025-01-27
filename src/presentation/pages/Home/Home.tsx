@@ -1,25 +1,12 @@
-import React, { useState } from "react";
+
 import "./Home.css";
 import { RecipeCard } from "../../components/";
 import { Recipe } from "../../../interfaces";
 import data from "../../../data/recipies.json";
 
 
-const recipe: Recipe = data[0];
 export const Home = () => {
 
-  const [favorites, setFavorites] = useState<Recipe[]>([]);
-  // const [data, setData] = useState<Recipe[]>([]);
-
-    const handleAddToFavorites = (recipe: Recipe) => {
-      if (favorites.some(fav => fav.id === recipe.id)) {
-        setFavorites(favorites.filter(fav => fav.id !== recipe.id)); // Quitar de favoritos
-      } else {
-        setFavorites([...favorites, recipe]); // Agregar a favoritos
-      }
-    };
-
-    const isFavorite = (recipe: Recipe) => favorites.some(fav => fav.id === recipe.id);
   return (
     <div>
       <div id="carrusel">
@@ -127,8 +114,7 @@ export const Home = () => {
             <RecipeCard 
               key={index} 
               recipe={recipe} 
-              isFavorite={isFavorite(recipe)}
-              onAddToFavorites={handleAddToFavorites}></RecipeCard>
+              ></RecipeCard>
           ))}
         </div>
       </section>

@@ -1,0 +1,11 @@
+#favorites {
+    width: 100%;
+    padding: 10px;
+  } 
+  
+  .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columnas de igual ancho */
+    gap: 20px; /* Espaciado entre tarjetas */
+    padding: 20px; /* Espaciado alrededor del contenedor */
+  }

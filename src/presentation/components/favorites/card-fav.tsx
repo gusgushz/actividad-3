@@ -1,5 +1,6 @@
 import React from "react";
 import { Recipe } from "../../../interfaces";
+import './card-fav.css';
 
 interface RecipeCardFavProps {
   recipe: Recipe
@@ -15,16 +16,15 @@ export const CardFavorites = ({recipe, onRemoveFromFavorites}: RecipeCardFavProp
         </div>
         <div className="card-fav-content">
           <div className="card-fav-header">
-            <h2>{recipe.name}</h2>
+            <h2 className="title">{recipe.name}</h2>
             {
               onRemoveFromFavorites && (
-                <button onClick={() => onRemoveFromFavorites(recipe.id)}>Eliminar</button>
+                <button className="btn-remove" onClick={() => onRemoveFromFavorites(recipe.id)}>Eliminar</button>
               )
             }
           </div>
+        </div>
       </div>
-    </div>
-      <h1>Favoritos</h1>
     </div>
   );
 };

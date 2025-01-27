@@ -1,21 +1,15 @@
-import React, { useState } from "react";
 import { CardFavorites } from '../../components/favorites/card-fav';
-import data from "../../../data/recipies.json";
-import { Recipe } from "../../../interfaces";
+import './Favorites.css';
+import { useFavorites } from "../../components/favorites/context-fav";
 
 
 
 export const Favorites = () => {
-  const [favorites, setFavorites] = useState<Recipe[]>([]);
+  const {favorites, removeFromFavorites} = useFavorites();
 
-  const handleRemoveFromFavorites = (recipeId: number) => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.filter((recipe) => recipe.id !== recipeId)
-    );
-  }
 
   return (
-    <div>
+    <section id='favorites'>
       <h1>Favoritos</h1>
       {favorites.length === 0 ? ( // Verificar si hay favoritos
         <p>No tienes recetas en favoritos. ¡Agrega algunas!</p>
@@ -25,11 +19,11 @@ export const Favorites = () => {
             <CardFavorites
               key={recipe.id}
               recipe={recipe}
-              onRemoveFromFavorites={handleRemoveFromFavorites}
+              onRemoveFromFavorites={removeFromFavorites}
             />
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
