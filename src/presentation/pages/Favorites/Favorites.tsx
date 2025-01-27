@@ -10,9 +10,11 @@ export const Favorites = () => {
 
   return (
     <section id='favorites'>
-      <h1>Favoritos</h1>
+      <h1 className='title'>Favoritos</h1>
       {favorites.length === 0 ? ( // Verificar si hay favoritos
-        <p>No tienes recetas en favoritos. ¡Agrega algunas!</p>
+        <div className='container-no-favorites'>
+          <p>No tienes recetas en favoritos aún. ¡Escoge tus favoritas!</p>
+        </div>
       ) : (
         <div className="favorites-grid">
           {favorites.map((recipe) => (

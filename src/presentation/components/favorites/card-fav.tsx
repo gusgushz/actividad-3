@@ -1,6 +1,6 @@
-import React from "react";
 import { Recipe } from "../../../interfaces";
 import './card-fav.css';
+import { MdDelete } from "react-icons/md";
 
 interface RecipeCardFavProps {
   recipe: Recipe
@@ -17,11 +17,15 @@ export const CardFavorites = ({recipe, onRemoveFromFavorites}: RecipeCardFavProp
         <div className="card-fav-content">
           <div className="card-fav-header">
             <h2 className="title">{recipe.name}</h2>
-            {
-              onRemoveFromFavorites && (
-                <button className="btn-remove" onClick={() => onRemoveFromFavorites(recipe.id)}>Eliminar</button>
-              )
-            }
+            <div className="btn-container">
+              {
+                onRemoveFromFavorites && (
+                  <button className="btn-remove" onClick={() => onRemoveFromFavorites(recipe.id)}>
+                    <MdDelete size={25} />
+                  </button>
+                )
+              }
+            </div>
           </div>
         </div>
       </div>

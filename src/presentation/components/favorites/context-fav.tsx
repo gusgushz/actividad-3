@@ -29,6 +29,11 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     
       const removeFromFavorites = (recipeId: number) => {
         setFavorites((prev) => prev.filter((recipe) => recipe.id !== recipeId));
+        const storedFavorites = localStorage.getItem("favorites");
+        if (storedFavorites) {
+            localStorage.removeItem(storedFavorites);
+        }
+
     };
 
     return (

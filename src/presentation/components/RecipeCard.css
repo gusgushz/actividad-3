@@ -110,4 +110,34 @@
   opacity: 0.8;
 }
 
+.recipe-message {
+  background-color: #4caf50; /* Verde para éxito */
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fade-in-out 2s ease;
+}
 
+/* Animación suave de entrada y salida */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
