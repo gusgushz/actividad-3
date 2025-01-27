@@ -1,19 +1,39 @@
 /* Estilo general de la tarjeta */
 .recipe-card {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgb(232, 232, 232);
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
-  transition: transform 0.3s ease;
-  padding: 1.5rem 1rem;
-  gap: 0.5rem;
+  transition: transform 0.3s;
 }
 
+
+.recipe-card-image {
+  max-width: 80%;
+  height: 200px;
+  object-fit: cover;
+  padding: 20px;
+  /* border-bottom: 2px solid #eee; */
+  /* padding-bottom: 30px; */
+}
 .recipe-card:hover {
   transform: scale(1.05);
+}
+
+.recipe-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.recipe-card-header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 /* Imagen de la receta */
@@ -69,3 +89,25 @@
   color: #555;
   margin-bottom: 5px;
 }
+
+.btn-favorite {
+  background: none;
+  border: none; 
+  cursor: pointer;
+  outline: none; 
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
+  color: #f9520f;
+}
+
+.btn-favorite:focus {
+  outline: none; 
+}
+
+.btn-favorite:hover {
+  opacity: 0.8;
+}
+
+

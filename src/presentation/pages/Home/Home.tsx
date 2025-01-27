@@ -1,11 +1,12 @@
-import React from "react";
+
 import "./Home.css";
 import { RecipeCard } from "../../components/";
 import { Recipe } from "../../../interfaces";
 import data from "../../../data/recipies.json";
 
-const recipe: Recipe = data[0];
+
 export const Home = () => {
+
   return (
     <div>
       <div id="carrusel">
@@ -107,44 +108,15 @@ export const Home = () => {
         </div>
       </div>
       <section id="recetas">
-        <article>
-          <h2>Receta 1: Ensalada César</h2>
-          <div>
-            <p>
-              Aprende a preparar una deliciosa ensalada César en pocos pasos.
-            </p>
-            <ul>
-              <li>Lechuga romana</li>
-              <li>Crutones</li>
-              <li>Queso parmesano</li>
-              <li>Aderezo César</li>
-            </ul>
-          </div>
-        </article>
-        <article>
-          <h2>Receta 2: Pasta Alfredo</h2>
-          <p>
-            Disfruta de una cremosa pasta Alfredo con ingredientes fáciles de
-            encontrar.
-          </p>
-          <ol>
-            <li>Hierve la pasta</li>
-            <li>Prepara la salsa con crema y queso parmesano</li>
-            <li>Mezcla y sirve</li>
-          </ol>
-        </article>
-        <article>
-          <h2>Receta 3: Pasta Alfredo</h2>
-          <p>
-            Disfruta de una cremosa pasta Alfredo con ingredientes fáciles de
-            encontrar.
-          </p>
-          <ol>
-            <li>Hierve la pasta</li>
-            <li>Prepara la salsa con crema y queso parmesano</li>
-            <li>Mezcla y sirve</li>
-          </ol>
-        </article>
+        <h2>Nuestras Recestas</h2>
+        <div className="recipe-grid">
+          {data.map((recipe: Recipe, index) => (
+            <RecipeCard 
+              key={index} 
+              recipe={recipe} 
+              ></RecipeCard>
+          ))}
+        </div>
       </section>
       <aside>
         <h3>Consejos de Cocina</h3>
@@ -154,3 +126,4 @@ export const Home = () => {
     </div>
   );
 };
+
