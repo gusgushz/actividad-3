@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { RecipeCard } from "../../components/";
 import { Recipe } from "../../../interfaces";
 import data from "../../../data/recipies.json";
 
+
 const recipe: Recipe = data[0];
 export const Home = () => {
+
+  const [favorites, setFavorites] = useState<Recipe[]>([]);
+  // const [data, setData] = useState<Recipe[]>([]);
+
+    const handleAddToFavorites = (recipe: Recipe) => {
+      if (favorites.some(fav => fav.id === recipe.id)) {
+        setFavorites(favorites.filter(fav => fav.id !== recipe.id)); // Quitar de favoritos
+      } else {
+        setFavorites([...favorites, recipe]); // Agregar a favoritos
+      }
+    };
+
+    const isFavorite = (recipe: Recipe) => favorites.some(fav => fav.id === recipe.id);
   return (
     <div>
       <div id="carrusel">
@@ -107,44 +121,16 @@ export const Home = () => {
         </div>
       </div>
       <section id="recetas">
-        <article>
-          <h2>Receta 1: Ensalada César</h2>
-          <div>
-            <p>
-              Aprende a preparar una deliciosa ensalada César en pocos pasos.
-            </p>
-            <ul>
-              <li>Lechuga romana</li>
-              <li>Crutones</li>
-              <li>Queso parmesano</li>
-              <li>Aderezo César</li>
-            </ul>
-          </div>
-        </article>
-        <article>
-          <h2>Receta 2: Pasta Alfredo</h2>
-          <p>
-            Disfruta de una cremosa pasta Alfredo con ingredientes fáciles de
-            encontrar.
-          </p>
-          <ol>
-            <li>Hierve la pasta</li>
-            <li>Prepara la salsa con crema y queso parmesano</li>
-            <li>Mezcla y sirve</li>
-          </ol>
-        </article>
-        <article>
-          <h2>Receta 3: Pasta Alfredo</h2>
-          <p>
-            Disfruta de una cremosa pasta Alfredo con ingredientes fáciles de
-            encontrar.
-          </p>
-          <ol>
-            <li>Hierve la pasta</li>
-            <li>Prepara la salsa con crema y queso parmesano</li>
-            <li>Mezcla y sirve</li>
-          </ol>
-        </article>
+        <h2>Nuestras Recestas</h2>
+        <div className="recipe-grid">
+          {data.map((recipe: Recipe, index) => (
+            <RecipeCard 
+              key={index} 
+              recipe={recipe} 
+              isFavorite={isFavorite(recipe)}
+              onAddToFavorites={handleAddToFavorites}></RecipeCard>
+          ))}
+        </div>
       </section>
       <aside>
         <h3>Consejos de Cocina</h3>
@@ -154,3 +140,4 @@ export const Home = () => {
     </div>
   );
 };
+

@@ -65,37 +65,6 @@
   }
 }
 
-
-
-/* Artículos */
-article {
-  background-color: white;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-article h2 {
-  color: #ff7043;
-  margin-bottom: 1rem;
-}
-
-article p {
-  margin-bottom: 1rem;
-}
-
-ul,
-ol {
-  padding-left: 1.5rem;
-}
-
 /* Aside */
 aside {
   margin: 2rem auto;
@@ -109,4 +78,17 @@ aside {
 aside h3 {
   color: #d84315;
   margin-bottom: 1rem;
+}
+
+
+#recetas {
+  width: 100%;
+  padding: 10px;
+} 
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 columnas de igual ancho */
+  gap: 20px; /* Espaciado entre tarjetas */
+  padding: 20px; /* Espaciado alrededor del contenedor */
 }
