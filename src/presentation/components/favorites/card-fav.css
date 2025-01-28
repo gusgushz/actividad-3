@@ -6,13 +6,13 @@
     transition: transform 0.3s;
 }
 
-.card-fav-body {
+/* .card-fav-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
+} */
 
 .card-fav-image {
     width: 100%;
