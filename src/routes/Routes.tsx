@@ -6,6 +6,7 @@ import {
   Contact,
   Favorites,
   Recipe,
+  Category
 } from "../presentation/pages";
 
 const AppRoutes: React.FC = () => (
@@ -15,6 +16,7 @@ const AppRoutes: React.FC = () => (
     <Route path="/Recipe/:id" element={<Recipe />} />
     <Route path="/Favorites" element={<Favorites />} />
     <Route path="/Contact" element={<Contact />} />
+    <Route path="/Category/:title" element={<Category/>} />
   </Routes>
 );
 

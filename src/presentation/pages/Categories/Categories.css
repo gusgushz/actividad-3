@@ -15,7 +15,7 @@
     width: 280px;
     text-align: center;
     margin: 20px;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
   }
   
   .category:hover {

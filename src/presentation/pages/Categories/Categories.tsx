@@ -1,40 +1,35 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useNavigation } from "react-router";
 import "./Categories.css"; // Asegúrate de crear este archivo CSS
 
 const categories = [
   {
-    title: "Postres",
-    imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6rBj7hEkiY_YbVrX5pp8iLFsLl4L5w6k6BqxfOgRAYum0HiB957fattY3pV9CRFeec4bx3NWOFKkODi0pUKolYLXd2ZCIZ2XQzsKIkc1GSQ4JiWPesRgDFTETkQIXOtxK_4fyFy2U-s_A/s1600/BeFunky-collage+%25281%2529.jpg",
-    link: "../CategoriesRecetas/bebidas"
+    title: "Comida mexicana",
+    imageUrl: "https://editorialtelevisa.brightspotcdn.com/dims4/default/b91caa2/2147483647/strip/false/crop/1200x672+0+0/resize/1200x672!/quality/90/?url=https%3A%2F%2Fk2-prod-editorial-televisa.s3.us-east-1.amazonaws.com%2Fbrightspot%2F6b%2F59%2Fae19ff0c42029062b2f3d03d3b1f%2Fmejores-recetas-de-comida-mexicana.jpeg",
+    link: "/recetas/tacos"
   },
   {
-    title: "Bebidas",
-    imageUrl: "https://st1.uvnimg.com/ff/02/b0af570f42138f53f71e73fd474d/recetas-bebidas-con-vino.jpg",
+    title: "Tacos de pescado",
+    imageUrl: "https://mojo.generalmills.com/api/public/content/emm57XARWE2tUveq8Vg8EA_gmi_hi_res_jpeg.jpeg?v=0dcb2463&t=16e3ce250f244648bef28c5949fb99ff",
     link: "/recetas/bebidas"
   },
   {
-    title: "Comidas",
-    imageUrl: "https://i.blogs.es/742038/receetas-ligeras-3-ing/450_1000.jpg",
+    title: "Tacos dorados",
+    imageUrl: "https://www.cocinadelirante.com/800x600/filters:format(webp):quality(75)/sites/default/files/images/2024/07/tacos-dorados-queso.jpg",
     link: "/recetas/entradas"
   },
   {
-    title: "Pasta",
-    imageUrl: "https://www.pequerecetas.com/wp-content/uploads/2024/09/recetas-de-pasta-italiana.jpg",
+    title: "Tacos de guisado",
+    imageUrl: "https://web.didiglobal.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fn7hs0hadu6ro%2F42YF5trfjsN64pJQKoNW8M%2F04f4aeb7aec6f6cc8a03ec2ec55602b7%2Fun-gustito-con-tacos-de-guisados.jpg&w=828&q=75",
     link: "/recetas/pasta"
   },
-  {
-    title: "Tacos",
-    imageUrl: "https://aquaworld.com.mx/uploads/0000/1/2023/05/01/tour4.jpg",
-    link: "/recetas/tacos"
-  }
 ];
 
 export const Categories = () => {
   const navigate = useNavigate();
 
-  const handleCategoryClick = (link: string) => {
-    navigate(link);
+  const handleCategoryClick = (title: string, imageUrl: string) => {
+    navigate(`/Category/${title}`,);
   };
 
   return (
@@ -43,7 +38,7 @@ export const Categories = () => {
         <div
           className="category"
           key={index}
-          onClick={() => handleCategoryClick(category.link)}
+          onClick={() => handleCategoryClick(category.title, category.imageUrl)}
         >
           <h1 className="category-title">{category.title}</h1>
           <img
